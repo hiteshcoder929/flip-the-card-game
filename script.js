@@ -89,3 +89,31 @@ restart.addEventListener("click", () => {
     });
     feedBack.innerText = "new game"
 })
+
+let dropdown = document.querySelector(".dropdown")
+let selected = document.querySelector(".dropdown-selected")
+let options = document.querySelector(".dropdown-options")
+
+dropdown.addEventListener("click", () => {
+  options.classList.toggle("active")
+})
+
+options.addEventListener("click", (e) => {
+  if (e.target.classList.contains("dropdown-item")) {
+    selected.innerText = e.target.innerText
+    options.classList.add("active")
+    if(selected.innerText === "Easy"){
+        let items = ["A", "A", "B", "B", "C", "C"]
+        shuffle()
+        render()
+    }else if(selected.innerText === "Medium"){
+        let items = ["A", "A", "B", "B", "C", "C","D","D","E","E","F","F"]
+        shuffle()
+        render()
+    }else if(selected.innerText === "Hard"){
+        let items = ["A", "A", "B", "B", "C", "C","D","D","E","E","F","F","G","G","H","H","I","I"]
+        shuffle()
+        render()
+    }
+  }
+})
