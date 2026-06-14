@@ -103,15 +103,15 @@ options.addEventListener("click", (e) => {
     selected.innerText = e.target.innerText
     options.classList.add("active")
     if(selected.innerText === "Easy"){
-        let items = ["A", "A", "B", "B", "C", "C"]
+        items = ["A", "A", "B", "B", "C", "C"]
         shuffle()
         render()
     }else if(selected.innerText === "Medium"){
-        let items = ["A", "A", "B", "B", "C", "C","D","D","E","E","F","F"]
+        items = ["A", "A", "B", "B", "C", "C","D","D","E","E","F","F"]
         shuffle()
         render()
     }else if(selected.innerText === "Hard"){
-        let items = ["A", "A", "B", "B", "C", "C","D","D","E","E","F","F","G","G","H","H","I","I"]
+        items = ["A", "A", "B", "B", "C", "C","D","D","E","E","F","F","G","G","H","H","I","I"]
         shuffle()
         render()
     }
